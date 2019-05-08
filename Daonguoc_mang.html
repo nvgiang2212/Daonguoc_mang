@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dao nguoc cac phan tu trong mang</title>
+</head>
+<body>
+	<script>
+		// Khai báo mảng x và các phần tử trong mảng
+		let x = [-3, 5, 1, 3, 2, 10];
+
+		// Khai báo biến first và gán giá trị bằng 0, để duyệt từ phần tử đầu tiên trong mảng
+		let first = 0;
+
+		// Khai báo biến last và gán giá trị bằng độ dài mảng x - 1, để duyệt phần tử cuối cùng trong mảng
+		let last = x.length - 1;
+
+		// Lặp, trong quá trình lặp, đổi chỗ phần tử đầu tiên và cuối cùng cho nhau. Sau đó, tăng biến first lên 1 để duyệt phần tử tiếp thep và giảm biến last đi 1.
+		while (first < last) {
+			let b = x[first];
+			x[first] = x[last];
+			x[last] = b;
+			first++;
+			last--;
+		}
+
+		document.write(x);
+	</script>
+</body>
+</html>
